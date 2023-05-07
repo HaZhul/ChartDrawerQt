@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>988</width>
+    <height>805</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(232, 255, 225);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCustomPlot" name="wykres1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>711</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="wykres2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>711</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonStartWykres1">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>231</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 5px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 5px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Start/Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonStartWykres2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>260</y>
+      <width>231</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 5px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 5px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Start/Stop</string>
+    </property>
+   </widget>
+   <widget class="QDial" name="frequency_1">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>450</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="amplitude">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>450</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="dial_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>450</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_a_1">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_b_1">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_f_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="accept_1">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>422</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 1px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 1px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>zatwierdz</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="input_range_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>460</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Impact</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="plainText">
+     <string>         4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>190</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>bias</string>
+    </property>
+   </widget>
+   <widget class="QDial" name="bias_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_f_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="accept_2">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>170</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 1px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 1px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>zatwierdz</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_b_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>130</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="amplitude_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="input_range_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>210</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Impact</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="plainText">
+     <string>         4</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_a_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>130</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="frequency_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>190</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>amplituda</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>częstotliwość</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="wykres3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>711</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="amplitude_3">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>710</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="accept_3">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>682</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 1px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 1px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>zatwierdz</string>
+    </property>
+   </widget>
+   <widget class="QDial" name="frequency_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>710</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_f_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>640</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDial" name="bias_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>710</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="input_range_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>720</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Impact</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="plainText">
+     <string>         4</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_a_3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>640</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcd_b_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>640</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonStartWykres3">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>520</y>
+      <width>231</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgb(0, 255, 0);
+	border: 5px solid white;
+	padding: 5px;
+}
+QPushButton:pressed
+{
+	background-color:rgb(0, 209, 0);
+	border: 5px solid black;
+	padding: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Start/Stop</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>140</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zakres</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>częstotliwość</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>440</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>amplituda</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>440</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>bias</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>390</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zakres</string>
+    </property>
+   </widget>
+   <widget class="QDial" name="frequency_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>970</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>700</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>częstotliwość</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>700</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>bias</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>650</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zakres</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>700</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>amplituda</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>988</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
